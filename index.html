@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaBreeze - Loja de Surf</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popup.css"> <!-- Estilo do pop-up -->
+    <script src="popup.js" defer></script> <!-- Script do pop-up -->
+    <script src="script.js" defer></script> <!-- Script geral -->
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo SeaBreeze">
+        </div>
+        <input type="text" placeholder="Buscar produtos...">
+        <button class="search-btn">Buscar</button>
+        <div class="cart">
+            <a href="#" id="cart-link">Carrinho Vazio</a>
+        </div>
+    </header>
+
+    <!-- Banner Carrossel -->
+    <div class="banner-carousel">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Surf nas Ondas">
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Praia ao Pôr do Sol">
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1563431189-64e0916f4906" alt="Equipamentos de Surf">
+        </div>
+    </div>
+
+    <main>
+        <div class="main-content">
+            <!-- Sidebar de Categorias -->
+            <aside class="categorias">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#" data-categoria="all">Todos</a></li>
+                    <li><a href="#" data-categoria="Pranchas">Pranchas</a></li>
+                    <li><a href="#" data-categoria="Camisetas">Camisetas</a></li>
+                    <li><a href="#" data-categoria="Shorts">Shorts</a></li>
+                    <li><a href="#" data-categoria="Acessórios">Acessórios</a></li>
+                </ul>
+            </aside>
+
+            <!-- Produtos -->
+            <section class="produtos" id="produtos">
+                <!-- Produtos carregados automaticamente -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Pop-up do Carrinho -->
+    <div id="cart-popup" class="cart-popup">
+        <div class="cart-content">
+            <span class="close-btn">&times;</span>
+            <h2>Itens no Carrinho</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Itens do carrinho vão aqui -->
+            </div>
+            <button class="buy-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+</body>
+</html>
