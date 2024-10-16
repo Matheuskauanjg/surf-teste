@@ -33,6 +33,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
+    gap: 10px;
 }
 
 .cart-item img {
@@ -45,4 +46,6 @@
 #total-value {
     font-weight: bold;
     margin-top: 15px;
+    text-align: right;
+    font-size: 1.2em;
 }

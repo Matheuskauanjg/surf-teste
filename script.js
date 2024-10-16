@@ -36,7 +36,7 @@ async function carregarProdutos() {
                 <img src="${produto.imagem}" alt="${produto.nome}">
                 <h4>${produto.nome}</h4>
                 <p>R$ ${produto.valor.toFixed(2)}</p>
-                <button class="buy-btn" onclick="adicionarAoCarrinho('${produto.nome}', ${produto.valor})">Adicionar ao Carrinho</button>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('${produto.nome}', ${produto.valor}, '${produto.imagem}')">Adicionar ao Carrinho</button>
             `;
             containerProdutos.appendChild(produtoDiv);
         });
