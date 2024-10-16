@@ -46,3 +46,21 @@ async function carregarProdutos() {
 }
 
 document.addEventListener('DOMContentLoaded', carregarProdutos);
+
+// Função para pesquisar produtos
+function pesquisarProdutos() {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    const produtos = document.querySelectorAll('.produto');
+
+    produtos.forEach(produto => {
+        const nomeProduto = produto.querySelector('h4').textContent.toLowerCase();
+        if (nomeProduto.includes(query)) {
+            produto.style.display = 'block';
+        } else {
+            produto.style.display = 'none';
+        }
+    });
+}
+
+// Adiciona o evento de input ao campo de pesquisa
+document.getElementById('search-bar').addEventListener('input', pesquisarProdutos);
