@@ -2,25 +2,25 @@
     {
         "nome": "Prancha de Surf Pro",
         "valor": 1200.50,
-        "imagem": "https://example.com/imagens/prancha.png",
+        "imagem": "https://images.tcdn.com.br/img/img_prod/1133757/prancha_de_surf_pro_ilha_xl_511_x_20_4_x_2_55_x_32_32l_1507_1_d74ecc4a8b41c634c99facc6338eef78.jpg",
         "categoria": "Pranchas"
     },
     {
         "nome": "Camiseta Surf Style",
         "valor": 99.99,
-        "imagem": "https://example.com/imagens/camiseta.png",
+        "imagem": "https://umapenca.imgix.net/172314/613d8c6f-a62c-497c-b733-fde70c0b8758.jpg?auto=compress,format&q=65&w=850&h=1200&fit=crop&crop=top",
         "categoria": "Camisetas"
     },
     {
         "nome": "Shorts de Praia",
         "valor": 150.00,
-        "imagem": "https://example.com/imagens/shorts.png",
+        "imagem": "https://images.tcdn.com.br/img/img_prod/643724/short_praia_de_maragogi_recreo_386_1_056908ddee71c7f5b2f4fce3c9857366.jpg",
         "categoria": "Shorts"
     },
     {
         "nome": "Óculos de Sol",
         "valor": 250.00,
-        "imagem": "https://example.com/imagens/oculos.png",
+        "imagem": "https://static.netshoes.com.br/produtos/oculos-de-sol-masculino-feminino-casual-esporte-fino-modelo-classico-lente-polarizada/06/I1D-0000-006/I1D-0000-006_zoom1.jpg?ts=1694453847?ims=400x",
         "categoria": "Acessórios"
     }
 ]
