@@ -41,6 +41,7 @@
     height: 50px;
     object-fit: cover;
     border-radius: 4px;
+    margin-right: 10px; /* Espaço entre imagem e texto */
 }
 
 #total-value {
