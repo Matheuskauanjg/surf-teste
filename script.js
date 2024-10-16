@@ -55,9 +55,9 @@ function pesquisarProdutos() {
     produtos.forEach(produto => {
         const nomeProduto = produto.querySelector('h4').textContent.toLowerCase();
         if (nomeProduto.includes(query)) {
-            produto.style.display = 'block';
+            produto.style.display = 'block';  // Exibe o produto se a pesquisa corresponder
         } else {
-            produto.style.display = 'none';
+            produto.style.display = 'none';    // Oculta o produto se não corresponder
         }
     });
 }
