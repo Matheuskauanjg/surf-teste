@@ -1,0 +1,26 @@
+[
+    {
+        "nome": "Prancha de Surf Pro",
+        "valor": 1200.50,
+        "imagem": "https://example.com/imagens/prancha.png",
+        "categoria": "Pranchas"
+    },
+    {
+        "nome": "Camiseta Surf Style",
+        "valor": 99.99,
+        "imagem": "https://example.com/imagens/camiseta.png",
+        "categoria": "Camisetas"
+    },
+    {
+        "nome": "Shorts de Praia",
+        "valor": 150.00,
+        "imagem": "https://example.com/imagens/shorts.png",
+        "categoria": "Shorts"
+    },
+    {
+        "nome": "Óculos de Sol",
+        "valor": 250.00,
+        "imagem": "https://example.com/imagens/oculos.png",
+        "categoria": "Acessórios"
+    }
+]
