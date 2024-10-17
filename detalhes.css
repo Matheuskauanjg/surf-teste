@@ -1,31 +1,109 @@
+/* Estilo geral para a página de detalhes */
+body {
+    background-color: #f0f4f8; /* Cor de fundo suave */
+    color: #004d40; /* Cor do texto */
+    font-family: 'Poppins', sans-serif; /* Fonte consistente */
+}
+
+/* Container principal para detalhes do produto */
 .produto-detalhes {
     display: flex;
     gap: 20px;
     padding: 20px;
+    max-width: 800px; /* Limita a largura do container */
+    margin: auto; /* Centraliza o container na página */
+    background-color: white; /* Fundo branco para destacar os detalhes */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+/* Estilo da imagem do produto */
 .produto-detalhes img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
+    width: 300px; /* Largura fixa da imagem */
+    height: 300px; /* Altura fixa da imagem */
+    object-fit: cover; /* Cobre o espaço sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas */
 }
 
+/* Estilo da informação do produto */
 .produto-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    justify-content: space-between; /* Espaça os elementos */
 }
 
+/* Títulos de informações do produto */
+.produto-info h2 {
+    font-size: 24px; /* Tamanho da fonte maior para o nome do produto */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo do preço do produto */
+.produto-info p {
+    font-size: 20px; /* Tamanho da fonte do preço */
+    color: #ff5722; /* Cor do preço */
+    font-weight: bold; /* Negrito para destacar */
+}
+
+/* Comentários */
 .comentarios {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaçamento acima dos comentários */
+    border-top: 1px solid #ccc; /* Linha separadora */
+    padding-top: 10px; /* Espaçamento superior */
 }
 
+/* Estilo do campo de texto dos comentários */
 #comentario-texto {
-    width: 100%;
-    height: 80px;
-    margin-top: 10px;
+    width: 100%; /* Largura total */
+    height: 80px; /* Altura do campo */
+    margin-top: 10px; /* Espaçamento acima do campo */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Bordas suaves */
+    border-radius: 4px; /* Bordas arredondadas */
 }
 
+/* Estilo do botão de enviar comentário */
 .comentarios button {
-    margin-top: 10px;
+    margin-top: 10px; /* Espaçamento acima do botão */
+    background-color: #0288d1; /* Cor de fundo azul */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave na mudança de cor */
+}
+
+/* Efeito ao passar o mouse sobre o botão de enviar */
+.comentarios button:hover {
+    background-color: #0277bd; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Estilo para o cabeçalho da página de detalhes */
+header {
+    background-color: #00796b; /* Cor de fundo do cabeçalho */
+    padding: 15px 20px; /* Espaçamento interno do cabeçalho */
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Centraliza logo verticalmente */
+}
+
+header input {
+    width: 50%; /* Largura do campo de busca */
+    padding: 8px; /* Espaçamento interno do campo */
+    border-radius: 25px; /* Bordas arredondadas */
+    border: none; /* Remove borda padrão */
+    outline: none; /* Remove contorno ao focar */
+}
+
+header .search-btn {
+    background-color: #ffab40; /* Cor do botão de busca */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    padding: 10px; /* Espaçamento interno do botão */
+    margin-left: 10px; /* Espaçamento à esquerda do botão */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
 }
