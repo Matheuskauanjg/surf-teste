@@ -107,3 +107,9 @@ header .search-btn {
     border-radius: 25px; /* Bordas arredondadas */
     cursor: pointer; /* Muda o cursor ao passar o mouse */
 }
+
+/* Tamanho fixo para a logo */
+.logo-img {
+    width: 70px;   /* Define a largura fixa para a logo */
+    height: auto;   /* Mantém a proporção da imagem */
+}
