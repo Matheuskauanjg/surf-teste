@@ -31,3 +31,13 @@ function adicionarComentario() {
 
 // Carrega os detalhes do produto ao abrir a página
 document.addEventListener('DOMContentLoaded', carregarDetalhes);
+
+function adicionarAoCarrinho() {
+    const nome = document.getElementById('produto-nome').textContent;
+    const valor = parseFloat(document.getElementById('produto-preco').textContent.replace('R$ ', '').replace(',', '.'));
+    const imagem = document.getElementById('produto-imagem').src;
+
+    // Chama a função que adiciona ao carrinho no popup
+    window.opener.adicionarAoCarrinho(nome, valor, imagem); // Adiciona no carrinho da loja principal
+    alert(`${nome} foi adicionado ao carrinho!`); // Mensagem de confirmação
+}

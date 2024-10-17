@@ -26,7 +26,10 @@
                 <p id="produto-preco"></p>
                 <p><strong>Tamanho disponível:</strong> P, M, G</p>
                 <p><strong>Avaliação:</strong> ★★★★☆</p>
-                
+
+                <!-- Botão Adicionar ao Carrinho -->
+                <button id="add-to-cart" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+
                 <div class="comentarios">
                     <h3>Comentários:</h3>
                     <div id="comentarios-container"></div>
@@ -52,6 +55,16 @@
             document.getElementById('produto-preco').textContent = `R$ ${parseFloat(valor).toFixed(2)}`;
             document.getElementById('produto-imagem').src = imagem;
         });
+
+        function adicionarAoCarrinho() {
+            const nome = document.getElementById('produto-nome').textContent;
+            const valor = parseFloat(document.getElementById('produto-preco').textContent.replace('R$ ', '').replace(',', '.'));
+            const imagem = document.getElementById('produto-imagem').src;
+
+            // Chama a função que adiciona ao carrinho no popup
+            window.opener.adicionarAoCarrinho(nome, valor, imagem); // Adiciona no carrinho da loja principal
+            alert(`${nome} foi adicionado ao carrinho!`); // Mensagem de confirmação
+        }
     </script>
 </body>
 </html>
