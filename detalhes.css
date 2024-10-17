@@ -1,0 +1,31 @@
+.produto-detalhes {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.produto-detalhes img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produto-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios {
+    margin-top: 20px;
+}
+
+#comentario-texto {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.comentarios button {
+    margin-top: 10px;
+}

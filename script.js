@@ -76,3 +76,31 @@ function showNextSlide() {
 }
 
 setInterval(showNextSlide, 3000);
+
+function carregarProdutos() {
+    try {
+        const response = await fetch('produtos.json');
+        const produtos = await response.json();
+
+        const containerProdutos = document.getElementById('produtos');
+        containerProdutos.innerHTML = ''; // Limpa o conteúdo existente
+
+        produtos.forEach(produto => {
+            const produtoDiv = document.createElement('div');
+            produtoDiv.classList.add('produto');
+            produtoDiv.setAttribute('data-categoria', produto.categoria);
+
+            produtoDiv.innerHTML = `
+                <a href="detalhes.html?nome=${encodeURIComponent(produto.nome)}&valor=${produto.valor}&imagem=${encodeURIComponent(produto.imagem)}&categoria=${produto.categoria}">
+                    <img src="${produto.imagem}" alt="${produto.nome}">
+                    <h4>${produto.nome}</h4>
+                    <p>R$ ${produto.valor.toFixed(2)}</p>
+                </a>
+            `;
+            containerProdutos.appendChild(produtoDiv);
+        });
+    } catch (error) {
+        console.error('Erro ao carregar produtos:', error);
+    }
+}
+

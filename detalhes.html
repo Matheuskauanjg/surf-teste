@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="detalhes.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo SeaBreeze" class="logo-img">
+        </div>
+        <input type="text" placeholder="Buscar produtos...">
+        <button class="search-btn">Buscar</button>
+        <div class="cart">
+            <a href="#" id="cart-link">Carrinho Vazio</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="produto-detalhes">
+            <img id="produto-imagem" alt="Imagem do Produto">
+            <div class="produto-info">
+                <h2 id="produto-nome"></h2>
+                <p id="produto-preco"></p>
+                <p><strong>Tamanho disponível:</strong> P, M, G</p>
+                <p><strong>Avaliação:</strong> ★★★★☆</p>
+                
+                <div class="comentarios">
+                    <h3>Comentários:</h3>
+                    <div id="comentarios-container"></div>
+                    <textarea id="comentario-texto" placeholder="Adicionar um comentário"></textarea>
+                    <button onclick="adicionarComentario()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="detalhes.js"></script>
+</body>
+</html>
