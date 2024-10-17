@@ -134,6 +134,6 @@ header input {
 
 /* Tamanho fixo para a logo */
 .logo-img {
-    width: 50px;   /* Define a largura fixa */
+    width:89px;   /* Define a largura fixa */
     height: auto;   /* Mantém a proporção da imagem */
 }
