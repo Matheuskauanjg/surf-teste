@@ -34,19 +34,26 @@ async function carregarProdutos() {
             produtoDiv.setAttribute('data-categoria', produto.categoria);
 
             produtoDiv.innerHTML = `
-                <a href="detalhes.html?nome=${encodeURIComponent(produto.nome)}&valor=${produto.valor}&imagem=${encodeURIComponent(produto.imagem)}&categoria=${produto.categoria}">
-                    <img src="${produto.imagem}" alt="${produto.nome}">
-                    <h4 class="produto-nome">${produto.nome}</h4>
-                    <p class="produto-valor">R$ ${produto.valor.toFixed(2)}</p>
-                </a>
+                <img src="${produto.imagem}" alt="${produto.nome}">
+                <h4>${produto.nome}</h4>
+                <p>R$ ${produto.valor.toFixed(2)}</p>
                 <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
             `;
+
+            // Evento de clique no botão "Adicionar ao Carrinho"
+            produtoDiv.querySelector('.add-to-cart-btn').addEventListener('click', () => {
+                adicionarAoCarrinho(produto.nome, produto.valor, produto.imagem); // Chama a função ao clicar
+            });
+
             containerProdutos.appendChild(produtoDiv);
         });
     } catch (error) {
         console.error('Erro ao carregar produtos:', error);
     }
 }
+
+document.addEventListener('DOMContentLoaded', carregarProdutos);
+
 
 
 document.addEventListener('DOMContentLoaded', carregarProdutos);
