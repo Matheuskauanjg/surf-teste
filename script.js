@@ -18,8 +18,8 @@ function filtrarProdutos(categoria) {
     });
 }
 
-// Carrega os produtos
-function carregarProdutos() {
+// Função assíncrona para carregar produtos
+async function carregarProdutos() {
     try {
         const response = await fetch('produtos.json');
         const produtos = await response.json();
@@ -77,5 +77,3 @@ function showNextSlide() {
 }
 
 setInterval(showNextSlide, 3000);
-
-
