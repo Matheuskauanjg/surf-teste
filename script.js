@@ -19,6 +19,7 @@ function filtrarProdutos(categoria) {
 }
 
 // Função assíncrona para carregar produtos
+// Carrega os produtos
 async function carregarProdutos() {
     try {
         const response = await fetch('produtos.json');
@@ -35,9 +36,10 @@ async function carregarProdutos() {
             produtoDiv.innerHTML = `
                 <a href="detalhes.html?nome=${encodeURIComponent(produto.nome)}&valor=${produto.valor}&imagem=${encodeURIComponent(produto.imagem)}&categoria=${produto.categoria}">
                     <img src="${produto.imagem}" alt="${produto.nome}">
-                    <h4>${produto.nome}</h4>
-                    <p>R$ ${produto.valor.toFixed(2)}</p>
+                    <h4 class="produto-nome">${produto.nome}</h4>
+                    <p class="produto-valor">R$ ${produto.valor.toFixed(2)}</p>
                 </a>
+                <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
             `;
             containerProdutos.appendChild(produtoDiv);
         });
@@ -45,6 +47,7 @@ async function carregarProdutos() {
         console.error('Erro ao carregar produtos:', error);
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', carregarProdutos);
 
@@ -77,3 +80,4 @@ function showNextSlide() {
 }
 
 setInterval(showNextSlide, 3000);
+
