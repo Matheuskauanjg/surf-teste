@@ -37,6 +37,21 @@
         </div>
     </main>
 
-    <script src="detalhes.js"></script>
+    <script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const nome = getQueryParam('nome');
+            const valor = getQueryParam('valor');
+            const imagem = getQueryParam('imagem');
+
+            document.getElementById('produto-nome').textContent = nome;
+            document.getElementById('produto-preco').textContent = `R$ ${parseFloat(valor).toFixed(2)}`;
+            document.getElementById('produto-imagem').src = imagem;
+        });
+    </script>
 </body>
 </html>

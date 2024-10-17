@@ -34,14 +34,17 @@ async function carregarProdutos() {
             produtoDiv.setAttribute('data-categoria', produto.categoria);
 
             produtoDiv.innerHTML = `
-                <img src="${produto.imagem}" alt="${produto.nome}">
-                <h4>${produto.nome}</h4>
-                <p>R$ ${produto.valor.toFixed(2)}</p>
+                <a href="detalhes.html?nome=${encodeURIComponent(produto.nome)}&valor=${produto.valor}&imagem=${encodeURIComponent(produto.imagem)}&categoria=${produto.categoria}">
+                    <img src="${produto.imagem}" alt="${produto.nome}">
+                    <h4>${produto.nome}</h4>
+                    <p>R$ ${produto.valor.toFixed(2)}</p>
+                </a>
                 <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
             `;
 
             // Evento de clique no botão "Adicionar ao Carrinho"
-            produtoDiv.querySelector('.add-to-cart-btn').addEventListener('click', () => {
+            produtoDiv.querySelector('.add-to-cart-btn').addEventListener('click', (event) => {
+                event.stopPropagation(); // Impede que o clique no botão redirecione para a página de detalhes
                 adicionarAoCarrinho(produto.nome, produto.valor, produto.imagem); // Chama a função ao clicar
             });
 
@@ -54,9 +57,6 @@ async function carregarProdutos() {
 
 document.addEventListener('DOMContentLoaded', carregarProdutos);
 
-
-
-document.addEventListener('DOMContentLoaded', carregarProdutos);
 
 // Função para pesquisar produtos
 function pesquisarProdutos() {
