@@ -45,21 +45,20 @@ body {
     font-weight: bold; /* Negrito para destacar */
 }
 
-/* Botão Adicionar ao Carrinho */
-#add-to-cart {
-    background-color: #ffab40; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
+/* Estilo do botão de adicionar ao carrinho */
+.add-to-cart-btn {
+    background-color: #0288d1; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
     border: none; /* Remove borda padrão */
     padding: 10px 15px; /* Espaçamento interno do botão */
-    border-radius: 25px; /* Bordas arredondadas */
+    border-radius: 20px; /* Bordas arredondadas */
     cursor: pointer; /* Muda o cursor ao passar o mouse */
     transition: background-color 0.3s; /* Transição suave na mudança de cor */
-    margin-top: 15px; /* Espaçamento acima do botão */
 }
 
-/* Efeito ao passar o mouse sobre o botão Adicionar ao Carrinho */
-#add-to-cart:hover {
-    background-color: #f57c20; /* Tom mais escuro ao passar o mouse */
+/* Efeito ao passar o mouse sobre o botão de adicionar ao carrinho */
+.add-to-cart-btn:hover {
+    background-color: #0277bd; /* Tom mais escuro ao passar o mouse */
 }
 
 /* Comentários */
@@ -102,11 +101,14 @@ header {
     padding: 15px 20px; /* Espaçamento interno do cabeçalho */
 }
 
-header .logo {
-    display: flex;
+/* Container do cabeçalho */
+.header-container {
+    display: flex; 
     align-items: center; /* Centraliza logo verticalmente */
+    justify-content: space-between; /* Espaça logo, campo de busca e carrinho */
 }
 
+/* Estilo do campo de busca */
 header input {
     width: 50%; /* Largura do campo de busca */
     padding: 8px; /* Espaçamento interno do campo */
@@ -115,6 +117,7 @@ header input {
     outline: none; /* Remove contorno ao focar */
 }
 
+/* Estilo do botão de busca */
 header .search-btn {
     background-color: #ffab40; /* Cor do botão de busca */
     color: white; /* Cor do texto do botão */

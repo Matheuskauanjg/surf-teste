@@ -8,13 +8,15 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo SeaBreeze" class="logo-img">
-        </div>
-        <input type="text" placeholder="Buscar produtos...">
-        <button class="search-btn">Buscar</button>
-        <div class="cart">
-            <a href="#" id="cart-link">Carrinho Vazio</a>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo SeaBreeze" class="logo-img">
+            </div>
+            <input type="text" placeholder="Buscar produtos...">
+            <button class="search-btn">Buscar</button>
+            <div class="cart">
+                <a href="#" id="cart-link">Carrinho Vazio</a>
+            </div>
         </div>
     </header>
 
@@ -26,10 +28,7 @@
                 <p id="produto-preco"></p>
                 <p><strong>Tamanho disponível:</strong> P, M, G</p>
                 <p><strong>Avaliação:</strong> ★★★★☆</p>
-
-                <!-- Botão Adicionar ao Carrinho -->
-                <button id="add-to-cart" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
-
+                <button class="add-to-cart-btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 <div class="comentarios">
                     <h3>Comentários:</h3>
                     <div id="comentarios-container"></div>
@@ -58,12 +57,10 @@
 
         function adicionarAoCarrinho() {
             const nome = document.getElementById('produto-nome').textContent;
-            const valor = parseFloat(document.getElementById('produto-preco').textContent.replace('R$ ', '').replace(',', '.'));
-            const imagem = document.getElementById('produto-imagem').src;
-
-            // Chama a função que adiciona ao carrinho no popup
-            window.opener.adicionarAoCarrinho(nome, valor, imagem); // Adiciona no carrinho da loja principal
-            alert(`${nome} foi adicionado ao carrinho!`); // Mensagem de confirmação
+            const valor = parseFloat(getQueryParam('valor'));
+            const imagem = getQueryParam('imagem');
+            // Chame aqui a função do popup.js para adicionar o item ao carrinho
+            adicionarAoCarrinho(nome, valor, imagem);
         }
     </script>
 </body>
