@@ -45,6 +45,23 @@ body {
     font-weight: bold; /* Negrito para destacar */
 }
 
+/* Botão Adicionar ao Carrinho */
+#add-to-cart {
+    background-color: #ffab40; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave na mudança de cor */
+    margin-top: 15px; /* Espaçamento acima do botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão Adicionar ao Carrinho */
+#add-to-cart:hover {
+    background-color: #f57c20; /* Tom mais escuro ao passar o mouse */
+}
+
 /* Comentários */
 .comentarios {
     margin-top: 20px; /* Espaçamento acima dos comentários */
