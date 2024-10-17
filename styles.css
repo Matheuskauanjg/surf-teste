@@ -131,3 +131,9 @@ header input {
     cursor: pointer;
     margin-top: 10px;
 }
+
+/* Tamanho fixo para a logo */
+.logo-img {
+    width: 150px;   /* Define a largura fixa */
+    height: auto;   /* Mantém a proporção da imagem */
+}
