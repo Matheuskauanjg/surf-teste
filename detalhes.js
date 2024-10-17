@@ -41,3 +41,32 @@ function adicionarAoCarrinho() {
     window.opener.adicionarAoCarrinho(nome, valor, imagem); // Adiciona no carrinho da loja principal
     alert(`${nome} foi adicionado ao carrinho!`); // Mensagem de confirmação
 }
+
+let comentarios = []; // Array para armazenar comentários
+
+function adicionarComentario() {
+    const comentarioTexto = document.getElementById('comentario-texto').value.trim();
+    
+    if (comentarioTexto) {
+        // Adiciona o comentário ao array
+        comentarios.push(comentarioTexto);
+        // Atualiza a visualização dos comentários
+        atualizarComentarios();
+        // Limpa o campo de texto
+        document.getElementById('comentario-texto').value = '';
+    } else {
+        alert('Por favor, escreva um comentário!');
+    }
+}
+
+function atualizarComentarios() {
+    const comentariosContainer = document.getElementById('comentarios-container');
+    comentariosContainer.innerHTML = ''; // Limpa os comentários existentes
+
+    comentarios.forEach((comentario, index) => {
+        const comentarioDiv = document.createElement('div');
+        comentarioDiv.classList.add('comentario');
+        comentarioDiv.textContent = comentario;
+        comentariosContainer.appendChild(comentarioDiv);
+    });
+}

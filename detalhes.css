@@ -95,6 +95,14 @@ body {
     background-color: #0277bd; /* Tom mais escuro ao passar o mouse */
 }
 
+.comentario {
+    background-color: #e0f7fa; /* Fundo suave para comentários */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 5px 0; /* Espaçamento entre os comentários */
+}
+
+
 /* Estilo para o cabeçalho da página de detalhes */
 header {
     background-color: #00796b; /* Cor de fundo do cabeçalho */
